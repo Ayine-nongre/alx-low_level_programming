@@ -9,7 +9,7 @@ int main(void)
 	int n;
 
 	n = 48;
-	while (n <= 57)
+	while (n < 58)
 	{
 		putchar(n);
 		if (n != 57)
