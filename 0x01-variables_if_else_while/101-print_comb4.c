@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	char n;
-	char m;
-	char o;
+	int n;
+	int m;
+	int o;
 
 	n = 48;
 	m = 48;
