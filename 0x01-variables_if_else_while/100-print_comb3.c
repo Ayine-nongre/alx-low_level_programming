@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char n;
-	char m;
+	int n;
+	int m;
 
 	n = 48;
 	m = 48;
