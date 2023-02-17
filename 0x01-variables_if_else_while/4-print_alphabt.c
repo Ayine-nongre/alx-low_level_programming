@@ -11,9 +11,12 @@ int main(void)
 	n = 97;
 	while (n < 123)
 	{
-		if (n != 'e' && n != 'q')
+		if (n != 101 && n != 113)
 		{
 			putchar(n);
+			n++;
+		} else
+		{
 			n++;
 		}
 	}
