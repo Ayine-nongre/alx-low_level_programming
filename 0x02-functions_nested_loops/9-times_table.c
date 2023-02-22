@@ -21,7 +21,7 @@ void times_table(void)
 			}
 			else
 			{
-				if (b >= 2)
+				if (b >= 1)
 				{
 					_putchar(' ');
 				}
