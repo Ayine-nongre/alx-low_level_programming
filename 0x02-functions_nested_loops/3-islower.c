@@ -2,7 +2,9 @@
 /**
  * _islower - prints 0 if letter is uppercase and 1 if letter is lowercase
  *
- * Return: Always 0 (Success)
+ * @b: parameter to be printed
+ *
+ * Return: 1 if lowercase and 0 if uppercase
  */
 int _islower(int b)
 {
