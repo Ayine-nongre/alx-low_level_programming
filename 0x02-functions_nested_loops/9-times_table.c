@@ -21,6 +21,10 @@ void times_table(void)
 			}
 			else
 			{
+				if (b >= 2 && b < 9)
+				{
+					_putchar(' ');
+				}
 				_putchar(48 + ans);
 			}
 			if (a == 9 && b == 9)
@@ -33,10 +37,6 @@ void times_table(void)
 			}
 			else
 			{
-				if (ans < 10 && b >= 2 && b < 9)
-				{
-					_putchar(' ');
-				}
 				_putchar(',');
 				_putchar(' ');
 			}
