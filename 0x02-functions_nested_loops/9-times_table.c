@@ -29,6 +29,7 @@ void times_table(void)
 			}
 			if (a == 9 && b == 9)
 			{
+				_putchar('\n');
 				break;
 			}
 			if (b == 9)
