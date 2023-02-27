@@ -8,14 +8,13 @@
 
 void rev_string(char *s)
 {
-	char *d;
+	char *d = *s;
 	int count, n;
 
 	count = n = 0;
 
 	while (*(s + count) != '\0')
 	{
-		d[count] = s[count];
 		count++;
 	}
 
