@@ -7,7 +7,7 @@
  * Return: int value
  */
 
-int *_strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int i = 0, diff = 0;
 
