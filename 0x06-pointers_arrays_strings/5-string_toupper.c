@@ -17,8 +17,11 @@ char *string_toupper(char *a)
 
 	for (; j < i; j++)
 	{
-		num = *(a + i) - 97;
-		*(a + i) = num + 65;
+		if (*(a + j) > 96 && *(a + j) < 123)
+		{
+			num = *(a + i) - 97;
+			*(a + i) = num + 65;
+		}
 	}
 	return (a);
 }
