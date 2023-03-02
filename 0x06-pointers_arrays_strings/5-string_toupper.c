@@ -2,15 +2,23 @@
 
 /**
  * string_toupper - changes lowercase characters to uppercase
- * @a - char to change
+ * @a: char to change
  * Return: char
  */
 
 char *string_toupper(char *a)
 {
-	int num = 0;
+	int num = 0, i = 0, j = 0;
 
-	num = a - 97;
-	a = num + 65;
+	while (*(a + i) != '\0')
+	{
+		i++;
+	}
+
+	for (; j < i; j++)
+	{
+		num = *(a + i) - 97;
+		*(a + i) = num + 65;
+	}
 	return (a);
 }
