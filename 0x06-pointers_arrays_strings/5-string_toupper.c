@@ -8,7 +8,7 @@
 
 char *string_toupper(char *a)
 {
-	int num = 0, i = 0, j = 0;
+	int i = 0, j = 0;
 
 	while (*(a + i) != '\0')
 	{
@@ -19,8 +19,7 @@ char *string_toupper(char *a)
 	{
 		if (*(a + j) > 96 && *(a + j) < 123)
 		{
-			num = *(a + i) - 97;
-			*(a + i) = num + 65;
+			*(a + j) = *(a + j) - 32;
 		}
 	}
 	return (a);
