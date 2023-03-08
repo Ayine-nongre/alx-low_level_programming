@@ -13,7 +13,7 @@ int binarySearch(int low, int high, int c)
 	int mid = (low + high) / 2;
 
 	if (mid * mid == c)
-		return (c);
+		return (mid);
 	if (low >= high)
 		return (-1);
 	if (c > mid * mid)
