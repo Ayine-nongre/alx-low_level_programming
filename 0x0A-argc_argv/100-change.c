@@ -42,6 +42,11 @@ int main(int argc, char *argv[])
 			count += value / 5;
 			value = value % 5;
 		}
+		else if (value >= 2)
+		{
+			count += value / 5;
+			value = value % 5;
+		}
 		else
 		{
 			count += value / 1;
