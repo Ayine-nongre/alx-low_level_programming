@@ -11,13 +11,11 @@
  * Description: Description: struct called "dog" that stores its name, its age
  */
 
-typedef struct dog dog_t;
-
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_t;
 
 #endif
