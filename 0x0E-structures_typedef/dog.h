@@ -1,5 +1,5 @@
-#ifndef _DOG_
-#define _DOG_
+#ifndef _DOG_H_
+#define _DOG_H_
 
 /**
  * struct dog - short description
@@ -11,11 +11,13 @@
  * Description: Description: struct called "dog" that stores its name, its age
  */
 
-typedef struct dog
+typedef struct dog dog_t;
+
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-}dog_t;
+};
 
 #endif
