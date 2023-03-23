@@ -9,45 +9,44 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list params;
-	unsigned int i;
-	char *str;
+va_list params;
+unsigned int i;
+char *str;
 
-	i = 0;
+i = 0;
 
-	va_start(params, format);
-
-	while (*(format + i) != '\0')
+va_start(params, format);
+while (*(format + i) != '\0')
+{
+if (format[i] == 'c' || format[i] == 'i' ||
+		format[i] == 'f' || format[i] == 's')
+{
+	switch (format[i])
 	{
-		if (format[i] == 'c' || format[i] == 'i' ||
-				format[i] == 'f' || format[i] == 's')
-		{
-			switch (format[i])
+		case 'c':
+			printf("%c", va_arg(params, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(params, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(params, double));
+			break;
+		default:
+			str = va_arg(params, char *);
+			if (str == NULL)
 			{
-				case 'c':
-					printf("%c", va_arg(params, int));
-					break;
-				case 'i':
-					printf("%d", va_arg(params, int));
-					break;
-				case 'f':
-					printf("%f", va_arg(params, double));
-					break;
-				default:
-					str = va_arg(params, char *);
-					if (str == NULL)
-					{
-						printf("nil");
-						break;
-					}
-					printf("%s", str);
+				printf("nil");
+				break;
 			}
-			if (format[i + 1] != '\0')
-				printf(", ");
-		}
-		i++;
+			printf("%s", str);
+			break;
 	}
-
-	printf("\n");
-	va_end(params);
+	if (format[i + 1] != '\0')
+		printf(", ");
+}
+i++;
+}
+printf("\n");
+va_end(params);
 }
