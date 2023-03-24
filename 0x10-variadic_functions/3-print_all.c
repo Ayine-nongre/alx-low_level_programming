@@ -10,7 +10,9 @@
 
 void print_all(const char * const format, ...)
 {
-va_list params, unsigned int i, char *str;
+va_list params;
+unsigned int i;
+char *str;
 
 i = 0, va_start(params, format);
 while (format && *(format + i) != '\0')
