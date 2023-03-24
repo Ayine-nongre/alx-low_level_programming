@@ -12,6 +12,11 @@ va_list params;
 unsigned int i;
 char *str;
 
+if (!format)
+{
+	printf(\n);
+	return;
+}
 i = 0;
 va_start(params, format);
 while (*(format + i) != '\0')
@@ -34,7 +39,7 @@ if (format[i] == 'c' || format[i] == 'i' ||
 			str = va_arg(params, char *);
 			if (str == NULL)
 			{
-				printf("nil");
+				printf("(nil)");
 				break;
 			}
 			printf("%s", str);
