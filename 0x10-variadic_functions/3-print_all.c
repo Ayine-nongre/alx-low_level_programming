@@ -1,25 +1,19 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
+
 /**
  * print_all - prints anything
  * @format: list of arguments
  * Return: void
  */
+
 void print_all(const char * const format, ...)
 {
-va_list params;
-unsigned int i;
-char *str;
+va_list params, unsigned int i, char *str;
 
-if (!format)
-{
-	printf(\n);
-	return;
-}
-i = 0;
-va_start(params, format);
-while (*(format + i) != '\0')
+i = 0, va_start(params, format);
+while (format && *(format + i) != '\0')
 {
 if (format[i] == 'c' || format[i] == 'i' ||
 		format[i] == 'f' || format[i] == 's')
@@ -47,12 +41,10 @@ if (format[i] == 'c' || format[i] == 'i' ||
 	}
 	while (format[i + 1] != '\0')
 	{
-		printf(", ");
-		break;
+		printf(", "), break;
 	}
 }
 i++;
 }
-printf("\n");
-va_end(params);
+printf("\n"), va_end(params);
 }
