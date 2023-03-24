@@ -41,7 +41,8 @@ if (format[i] == 'c' || format[i] == 'i' ||
 	}
 	while (format[i + 1] != '\0')
 	{
-		printf(", "), break;
+		printf(", ");
+		break;
 	}
 }
 i++;
