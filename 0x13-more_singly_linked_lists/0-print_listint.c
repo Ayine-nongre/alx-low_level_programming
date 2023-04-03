@@ -9,9 +9,9 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t n;
-	listint_t temp;
+	listint_t *temp;
 
-	temp = malloc(sizeof(listint));
+	temp = malloc(sizeof(listint_t));
 	if (!temp)
 	{
 		free(temp);
