@@ -9,7 +9,8 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *temp, *var;
+	listint_t *temp;
+	listint_t *var;
 
 	(void)var;
 
@@ -20,6 +21,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		free(temp);
 		return (NULL);
 	}
+
 	temp->n = n;
 	temp->next = NULL;
 	var = *head;
