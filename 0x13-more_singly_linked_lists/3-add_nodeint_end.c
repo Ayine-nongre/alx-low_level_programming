@@ -14,7 +14,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	(void)var;
 
-	temp = malloc(sizeof(listint_t))
+	temp = malloc(sizeof(listint_t));
 
 	if (!temp)
 	{
