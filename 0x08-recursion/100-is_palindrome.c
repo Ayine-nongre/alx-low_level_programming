@@ -13,7 +13,7 @@ int compare(char *s, int n1, int n2)
 	if (*(s + n1) == '\0')
 		return (1);
 	if (*(s + n1) == *(s + n2))
-		return (1 & compare(s, (n1 + 1) , (n2 - 1)));
+		return (1 & compare(s, (n1 + 1), (n2 - 1)));
 	return (0);
 }
 
