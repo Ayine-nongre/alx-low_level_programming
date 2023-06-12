@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	char *str;
 
 	if (ac == 0 || av == NULL)
-		putchar('\0');
+		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 			count++;
 	}
 
-	str = malloc(sizeof(str) * (count + ac + 1));
+	str = malloc(sizeof(str) * count);
 	if (str == NULL)
 	{
 		free(str);
