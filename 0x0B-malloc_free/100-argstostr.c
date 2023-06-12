@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 	{
 		free(str);
-		_putchar('\0');
+		putchar('\0');
 	}
 
 	for (i = 0; i < ac; i++)
