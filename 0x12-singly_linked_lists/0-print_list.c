@@ -1,23 +1,24 @@
 #include "lists.h"
 
 /**
- * print_list - prints all the element of a list_t list
- * @h: list_t variable
+ * print_list - prints all the elements of a list_t list
+ * @h: list_t param
+ * Return: size_t value
  */
 
 size_t print_list(const list_t *h)
 {
-	size_t num = 0;
+	size_t n = 0;
 
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			printf("[%lu] %s\n", 0, "(nil)");
+			printf("[%d] (nil)\n", 0);
 		else
-			printf("[%lu] %s\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-		num++;
+		n++;
 	}
 
-	return (num);
+	return (n);
 }
