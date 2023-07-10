@@ -23,7 +23,7 @@ void copy_files(int num_read, int num_write, int file_from,
 			exit(98);
 		}
 
-		num_write = write(file_to, str, 1024);
+		num_write = write(file_to, str, num_read);
 		if (num_write == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", to);
