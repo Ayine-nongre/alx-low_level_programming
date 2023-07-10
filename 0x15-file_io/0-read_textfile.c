@@ -26,10 +26,13 @@ size_t read_textfile(const char *filename, size_t letters)
 	fp = open(filename, O_RDONLY);
 
 	if (fp == -1)
-		return (-1);
+		return (0);
 
 	num_read = read(fp, str, letters);
 	num_write = write(1, str, num_read);
+
+	if (num_read == -1 || num_write == -1)
+		return (0);
 
 	close(fp);
 	return (num_write);
