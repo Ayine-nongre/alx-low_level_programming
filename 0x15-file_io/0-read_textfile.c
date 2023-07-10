@@ -29,9 +29,9 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	num_read = read(fp, str, letters);
-	num_write = write(1, str, num_read);
+	num_write = write(STDOUT_FILENO, str, num_read);
 
-	if (num_read == -1 || num_write == -1)
+	if (num_read == -1 || num_write == -1 || num_write != letters)
 		return (0);
 
 	close(fp);
