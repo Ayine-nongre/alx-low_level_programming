@@ -19,7 +19,7 @@ int jump_search(int *array, size_t size, int value)
 		return (-1);
 	a = 0;
 	b = sqrt(size);
-	n = size;
+	n = (int) size;
 
 	while (b < n && array[b] < value)
 	{
